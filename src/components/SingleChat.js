@@ -67,19 +67,22 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
 
   useEffect(() => {
     socket = io(process.env.REACT_APP_SOCKET_ENDPOINT);
-    socket.emit("setup", user);
+    socket.emit("setup", user); 
     
     socket.on("connected", () => setSocketConnected(true));
 
     socket.on("typing", () => setIsTyping(true));
     socket.on("stop-typing", () => setIsTyping(false));
-  }, []);
+  }, []// eslint-disable-line
+  );
 
   useEffect(() => {
-    fetchMessages();
-
+    
+    fetchMessages(); 
+   
     selectedChatCompare = selectedChat;
-  }, [selectedChat]);
+  }, [selectedChat] // eslint-disable-line 
+  );
 
   useEffect(() => {
     socket.on("message-received", (newMessageReceived) => {

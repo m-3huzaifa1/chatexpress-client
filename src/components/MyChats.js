@@ -28,7 +28,8 @@ const MyChats = ({ fetchAgain }) => {
   useEffect(() => {
     setLoggedUser(getUserFromLocalStorage("user"));
     fetchChats();
-  }, [fetchAgain]);
+  }, [fetchAgain] // eslint-disable-line 
+  );
 
   return (
     <Box
