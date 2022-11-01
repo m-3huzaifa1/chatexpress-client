@@ -107,6 +107,8 @@ const Signup = () => {
       >
         Sign Up
       </Button>
+      <br/><br/>
+      <h1 style={{padding:'1px'}}><b>** Mail mohdhuzaifa80@gmail.com for any issues **</b></h1>
     </VStack>
   );
 };

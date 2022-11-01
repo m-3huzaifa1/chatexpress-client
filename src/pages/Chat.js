@@ -10,9 +10,10 @@ const Chat = () => {
 
 
 
-  return (
+  return (<>
     <div style={{ width: "100%" }}>
       {user && <SideDrawer />}
+      
       <Box
         display="flex"
         justifyContent="space-between"
@@ -25,8 +26,13 @@ const Chat = () => {
         {user && (
           <ChatBox fetchAgain={fetchAgain} setFetchAgain={setFetchAgain} />
         )}
+        
       </Box>
+      
     </div>
+    <h1 style={{padding:'2px',textAlign: 'center'}} ><b>** Mail mohdhuzaifa80@gmail.com for any issues **</b></h1>
+
+    </>
   );
 };
 
