@@ -2,7 +2,7 @@ import axios from "axios";
 import { getUserFromLocalStorage } from "./localStorage";
 
 const api = axios.create({
-  baseURL: "https://chat-expresss.herokuapp.com",
+  baseURL: "https://chatexpress.onrender.com",
 });
 
 api.interceptors.request.use((config) => {
